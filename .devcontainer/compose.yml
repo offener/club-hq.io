@@ -1,0 +1,19 @@
+services:
+  club-hq:
+    build:
+      context: .
+      dockerfile: club-hq.dockerfile
+    container_name: club-hq
+    volumes:
+      - ..:/workspaces:cached
+
+  postgres:
+    image: postgres:17.6
+    restart: always
+    shm_size: '128mb'
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: clubhq_dev

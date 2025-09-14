@@ -1,15 +1,18 @@
 {
-	"name": "template",
-	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.19",
+	"name": "club-hq",
+	"dockerComposeFile": "compose.yml",
+	"service": "club-hq",
+	"workspaceFolder": "/workspaces/",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"github.copilot-chat",
 				"github.copilot",
 				"github.vscode-pull-request-github",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"ms-ossdata.vscode-pgsql",
+				"ms-azuretools.vscode-docker"
 			]
 		}
-	},
-	"postCreateCommand": "bash .devcontainer/setup.sh"
+	}
 }
