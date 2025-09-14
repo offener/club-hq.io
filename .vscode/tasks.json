@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "connect to postgres",
+            "type": "shell",
+            "command": "psql",
+            "args": [
+                "host=postgres user=postgres password=postgres dbname=postgres"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
